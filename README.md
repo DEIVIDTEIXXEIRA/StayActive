@@ -9,9 +9,8 @@ A CLI application that helps you maintain an "active" status on Slack and other 
 ## 🚀 Installation
 
 ```bash
-go install github.com/danielmesquitta/stay-active@latest
+go install github.com/DEIVIDTEIXXEIRA/StayActive@latest
 ```
-
 ## 💻 Usage
 
 ### Basic Usage
