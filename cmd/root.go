@@ -19,6 +19,11 @@ var (
 	verbose  bool
 )
 
+// ---- ADIÇÃO PARA MOCK ----
+var typeStr = robotgo.TypeStr
+
+// --------------------------
+
 var rootCmd = &cobra.Command{
 	Use:   "stay-active",
 	Short: "Press random letters at specified intervals to keep your system active",
@@ -74,7 +79,10 @@ func runAutoPress(cmd *cobra.Command, args []string) {
 		select {
 		case <-ticker.C:
 			randomLetter := string(rune(rand.IntN(26) + 'a'))
-			robotgo.TypeStr(randomLetter)
+
+			// ---- ALTERADO PARA MOCK ----
+			typeStr(randomLetter)
+			// ----------------------------
 
 		case <-timer.C:
 			println("Duration completed. Stopping auto-press.")
